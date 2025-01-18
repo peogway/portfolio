@@ -394,6 +394,9 @@ main#home h1 {
 	.nav-link {
 		transform: scale(1.5);
 	}
+	#lg-heading-home {
+		font-size: 12rem;
+	}
 }
 
 @media screen and (min-width: 1171) {
