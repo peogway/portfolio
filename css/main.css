@@ -446,12 +446,12 @@ main#home h1 {
 		transform: translate3d(0, 0, 0);
 	}
 	.menu-nav {
-		height: 75vh;
+		height: 65vh;
 		transform: translate3d(-100%, 0, 0);
 		font-size: 24px;
 	}
 	.menu-branding {
-		height: 25vh;
+		height: 35vh;
 		transform: translate3d(100%, 0, 0);
 	}
 	.menu-branding .portrait {
