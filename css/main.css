@@ -468,6 +468,32 @@ main#home h1 {
 	.bio-image {
 		transform: scale(0.8) translate(-2.5rem, 0px);
 	}
+
+	.menu-btn {
+		transform: translate(0, -1rem);
+	}
+	.menu-btn:hover {
+		transform: translate(0 -1rem) scale(2);
+	}
+	#menu-btn-about:hover {
+		transform: translate(-2rem, -1rem) scale(2);
+	}
+	#menu-btn-about {
+		transform: translate(-2rem, -1rem);
+	}
+
+	#menu-btn-contact:hover {
+		transform: translate(-4rem, -1rem) scale(3);
+	}
+	#menu-btn-contact {
+		transform: translate(-4rem, -1rem);
+	}
+	main#contact .sm-heading {
+		max-width: 80%;
+	}
+	div.boxes div {
+		max-width: 70%;
+	}
 }
 
 @media screen and (max-width: 500px) {
