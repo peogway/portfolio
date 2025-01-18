@@ -372,6 +372,28 @@ main#home h1 {
 		margin-top: 10rem; /* Adjust this value as needed */
 		margin-left: 2rem;
 	}
+	#menu-btn-home {
+		transform: translate(-50px, -80px) scale(2);
+	}
+
+	#menu-btn-home:hover {
+		transform: translate(-50px, -80px) scale(2.5);
+	}
+	.menu-btn:hover:not(#menu-btn-home) {
+		transform: translate(-50px, 30px) scale(2.5);
+	}
+	.menu-btn:not(#menu-btn-home) {
+		transform: translate(-50px, 30px) scale(2);
+	}
+	/* .btn-line {
+		transform: scale(2);
+	} */
+	.nav-item {
+		font-size: 10rem;
+	}
+	.nav-link {
+		transform: scale(1.5);
+	}
 }
 
 @media screen and (min-width: 1171) {
@@ -419,6 +441,7 @@ main#home h1 {
 			'job3';
 		grid-template-columns: 1fr;
 	}
+
 	ul.menu-nav,
 	div.menu-branding {
 		float: none;
