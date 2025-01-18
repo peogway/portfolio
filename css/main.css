@@ -472,27 +472,23 @@ main#home h1 {
 	.menu-btn {
 		transform: translate(0, -1rem);
 	}
-	.menu-btn:hover {
-		transform: translate(0 -1rem) scale(2);
-	}
-	#menu-btn-about:hover {
-		transform: translate(-2rem, -1rem) scale(2);
-	}
+
 	#menu-btn-about {
 		transform: translate(-2rem, -1rem);
 	}
 
-	#menu-btn-contact:hover {
-		transform: translate(-4rem, -1rem) scale(3);
-	}
 	#menu-btn-contact {
-		transform: translate(-4rem, -1rem);
+		transform: translate(-8rem, -1rem);
 	}
 	main#contact .sm-heading {
-		max-width: 80%;
+		max-width: 90%;
 	}
 	div.boxes div {
-		max-width: 70%;
+		max-width: 80%;
+	}
+	main#contact a:not(div.icons a) {
+		max-width: 90%;
+		word-wrap: break-word;
 	}
 }
 
