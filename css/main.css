@@ -122,31 +122,6 @@
 	transition-delay: 0.4s;
 }
 
-@keyframes slide {
-	0% {
-		left: 100%;
-		width: 100%;
-	}
-	5% {
-		left: 0%;
-	}
-	25% {
-		left: 0%;
-	}
-	30% {
-		left: -100%;
-		width: 100%;
-	}
-	30.0001% {
-		left: -100%;
-		width: 0%;
-	}
-	100% {
-		left: 100%;
-		width: 0%;
-	}
-}
-
 html {
 	font-size: 14px;
 }
@@ -412,14 +387,28 @@ main#home h1 {
 }
 
 @media screen and (max-width: 900px) {
-	main {
+	.about-info .job {
+		max-width: 90%;
+	}
+	#bio-heading {
+		margin-left: -10px;
+	}
+	p#description {
+		max-width: 90%;
+	}
+	main#home {
 		transform: translate(-2rem, 20px);
+	}
+	main:not(#home) {
+		padding: 0;
+		margin: 2rem 1rem 2rem 1rem;
 	}
 
 	#lg-heading-home {
 		font-size: 6rem;
 		line-height: 1;
 		margin-bottom: 1rem;
+		margin-right: 20rem;
 	}
 	.lg-heading:not(#lg-heading-home) {
 		font-size: 5rem;
@@ -434,6 +423,7 @@ main#home h1 {
 		bottom: 0;
 		left: 0;
 		margin-left: 4rem;
+		margin-bottom: 1.4rem;
 	}
 	main .about-info {
 		grid-template-areas:
@@ -474,6 +464,9 @@ main#home h1 {
 	}
 	.projects {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.bio-image {
+		transform: scale(0.8) translate(-1rem, 0px);
 	}
 }
 
