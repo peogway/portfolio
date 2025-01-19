@@ -543,6 +543,30 @@ main:not(#home) {
 		max-width: 90%;
 		word-wrap: break-word;
 	}
+
+	main:not(#home) {
+		transform: translate(0, 3rem);
+	}
+
+	.prj-picture > img {
+		transform: scale(0.8);
+	}
+
+	.item {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.description {
+		width: 100%;
+	}
+	swiper-container {
+		width: 100%;
+	}
+	.projects {
+		transform: translate(-1rem, 0);
+	}
 }
 
 @media screen and (max-width: 500px) {
