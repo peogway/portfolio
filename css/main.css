@@ -452,7 +452,7 @@ main:not(#home) {
 	}
 	main:not(#home) {
 		padding: 0;
-		margin: 2rem 1rem 2rem 1rem;
+		margin: 0rem 1rem 2rem 1rem;
 	}
 
 	#lg-heading-home {
@@ -545,7 +545,7 @@ main:not(#home) {
 	}
 
 	main:not(#home) {
-		transform: translate(0, 3rem);
+		transform: translate(0, 2rem);
 	}
 
 	.prj-picture > img {
@@ -561,11 +561,15 @@ main:not(#home) {
 	.description {
 		width: 100%;
 	}
-	swiper-container {
+	.swiper-container {
 		width: 100%;
 	}
-	.projects {
-		transform: translate(-1rem, 0);
+	body {
+		position: static;
+	}
+
+	footer {
+		margin-top: 3rem;
 	}
 }
 
