@@ -131,27 +131,28 @@ html {
 }
 
 body {
-	background: #444;
-	color: #fff;
-	height: 100%;
-	margin: 0;
-	font-family: 'Times New Roman', serif;
-
-	line-height: 1.5;
-}
-body#bg-img {
 	background: url(../img/background.jpg);
 	background-attachment: fixed;
 	background-size: cover;
+	color: #fff;
+	height: 100%;
+	font-family: 'Times New Roman', serif;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
 }
-body#bg-img::after {
+body:not(#bg-img) {
+	position: relative;
+}
+
+body::after {
 	content: '';
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(68, 68, 68, 0.6);
+	background: rgba(68, 67, 67, 0.6);
 	z-index: -1;
 }
 
@@ -268,10 +269,12 @@ main#home h1 {
 }
 
 .projects {
-	display: grid;
-	/* place-items: center; */
+	display: flex;
+	/* place-items: center;
 	gap: 20rem 10rem;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr); */
+	flex-direction: column;
+	gap: 10rem;
 }
 .projects img {
 	border-radius: 5%;
@@ -284,22 +287,45 @@ main#home h1 {
 	transition: all 0.5s ease-out;
 }
 .item {
-	display: flex;
-	flex-direction: column; /* Keeps other elements stacked vertically */
-	align-items: center; /* Horizontal centering */
-	text-align: center; /* Aligns text content to center */
+	display: grid;
+	grid-template-areas: 'picture info';
+	grid-template-columns: 30rem 1fr;
+	gap: 3rem;
+	padding: 5px;
 }
+
+.item > .prj-picture {
+	display: flex;
+	align-items: center; /* Vertically center content */
+	justify-content: center;
+	grid-area: 'picture';
+	text-align: center;
+}
+
+.item > .prj-info {
+	grid-area: 'info';
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .description {
 	font-size: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	max-width: 70rem;
+	/* height: 10rem; */
 }
 .item p {
-	align-self: flex-start; /* Aligns <p> to the start horizontally */
-	text-align: left; /* Aligns the text inside <p> to the left */
+	align-self: flex-start;
+	text-align: left;
 }
 .btn,
 .btn-dark,
 .btn-light {
-	width: 50rem;
+	width: 70%;
 	font-size: 20px;
 	border-radius: 3%;
 	display: block;
