@@ -255,11 +255,13 @@ main#home h1 {
 	font-weight: bold;
 }
 
-#link-to-contact {
+#link-to-contact,
+#link-to-OpenWeather {
 	color: #6666ff;
 	font-weight: bold;
 }
-#link-to-contact:hover {
+#link-to-contact:hover,
+#link-to-OpenWeather:hover {
 	transition: all 0.5s ease-out;
 	color: #eece1a;
 	text-decoration: underline;
@@ -267,12 +269,13 @@ main#home h1 {
 
 .projects {
 	display: grid;
-	grid-gap: 0.7rem;
-	grid-template-columns: repeat(3, 1fr);
+	/* place-items: center; */
+	gap: 20rem 10rem;
+	grid-template-columns: repeat(2, 1fr);
 }
 .projects img {
 	border-radius: 5%;
-	width: 100%;
+	/* width: 80%; */
 	border: 3px #fff solid;
 }
 .projects img:hover {
@@ -280,16 +283,30 @@ main#home h1 {
 	border-color: #eece1a;
 	transition: all 0.5s ease-out;
 }
-
+.item {
+	display: flex;
+	flex-direction: column; /* Keeps other elements stacked vertically */
+	align-items: center; /* Horizontal centering */
+	text-align: center; /* Aligns text content to center */
+}
+.description {
+	font-size: 2rem;
+}
+.item p {
+	align-self: flex-start; /* Aligns <p> to the start horizontally */
+	text-align: left; /* Aligns the text inside <p> to the left */
+}
 .btn,
 .btn-dark,
 .btn-light {
-	font-size: 2rem;
+	width: 50rem;
+	font-size: 20px;
 	border-radius: 3%;
 	display: block;
-	padding: 0.5rem 1 rem;
+	padding: 0.5rem 1rem;
 	border: 0;
 	margin-bottom: 0.5rem;
+	margin-top: 10px;
 }
 .btn:hover,
 .btn-dark:hover,
@@ -538,5 +555,23 @@ main#home h1 {
 .email:hover {
 	text-decoration: underline !important;
 	text-decoration-color: blue;
+}
+
+swiper-container {
+	width: 40rem;
+	/* padding-top: 50px; */
+	/* padding-bottom: 50px; */
+}
+
+swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 150px;
+	height: 80px;
+}
+
+swiper-slide img {
+	display: block;
+	width: 100%;
 }
 
